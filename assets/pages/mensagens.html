@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Motivacionais para Inspirar o Seu Dia | RMTI</title>
+    <meta name="description" content="Confira as melhores frases motivacionais para inspirar, compartilhar e começar o dia com positividade.">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Frases Motivacionais</h1>
+            <p>Encontre mensagens que elevam sua energia e fortalecem sua determinação.</p>
+
+            <nav class="main-menu">
+            <ul>
+                <li><a href="/motivacionais">Motivacionais</a></li>
+                <li><a href="/amor">De Amor</a></li>
+                <li><a href="/bom-dia">De Bom Dia</a></li>
+                <li><a href="/amizade">De Amizade</a></li>
+                <li><a href="/reflexao">De Reflexão</a></li>
+                <li><a href="/engracadas">Engraçadas</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER TOPO (AdSense) -->
+    <section class="topBanner">
+        <!-- <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXX"
+            data-ad-slot="XXXX"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins> -->
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- INTRODUÇÃO DA CATEGORIA -->
+        <section class="introCategoria">
+            <h2>Mensagens para Inspirar o Seu Dia</h2>
+            <p>Essas frases foram selecionadas para te motivar e lembrar que cada dia é uma nova oportunidade de vencer.</p>
+        </section>
+
+        <!-- LISTA DE MENSAGENS -->
+        <section class="listaMensagens">
+            <article>
+                <blockquote>“Acredite em si mesmo e tudo será possível.”</blockquote>
+                <button>Copiar frase</button>
+            </article>
+
+            <article>
+                <blockquote>“O sucesso é a soma de pequenos esforços repetidos dia após dia.”</blockquote>
+                <button>Copiar frase</button>
+            </article>
+
+            <article>
+                <blockquote>“Você é mais forte do que imagina.”</blockquote>
+                <button>Copiar frase</button>
+            </article>
+        </section>
+
+        <!-- ANÚNCIO ENTRE CONTEÚDOS -->
+        <section class="in-article-banner">
+            <!-- <ins class="adsbygoogle"
+                style="display:block; text-align:center;"
+                data-ad-client="ca-pub-XXXX"
+                data-ad-slot="XXXX"
+                data-ad-format="fluid"
+                data-ad-layout="in-article"
+                data-full-width-responsive="true">
+            </ins> -->
+        </section>
+
+        <!-- FRASES POPULARES / RELACIONADAS -->
+        <section class="relacionadas">
+            <h2>Outras frases que você pode gostar</h2>
+            <ul>
+                <li><button>Frases de Amor</button></li>
+                <li><button>Frases de Reflexão</button></li>
+                <li><button>Frases de Bom Dia</button></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer-banner">
+            <!-- <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXX"
+                data-ad-slot="XXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins> -->
+        </section>
+
+        <div class="conteudoFooter">
+            <p>&copy; 2025 <strong>RMTI</strong> — Todos os direitos reservados.</p>
+            <nav class="linksFooter">
+                <a href="/politica-de-privacidade">Política de Privacidade</a>
+                <a href="/termos-de-uso">Termos de Uso</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE COPIAR FRASES -->
+    <script>
+        document.querySelectorAll(".listaMensagens button").forEach(btn => {
+            btn.addEventListener("click", () => {
+            const frase = btn.previousElementSibling.textContent;
+            navigator.clipboard.writeText(frase);
+            btn.textContent = "Copiado!";
+            setTimeout(() => btn.textContent = "Copiar frase", 1500);
+            });
+        });
+    </script>
+
+</body>
+</html>
