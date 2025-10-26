@@ -12,18 +12,19 @@
     <!-- HEADER -->
     <header class="site-header">
         <div class="container">
-            <h1>Frases Motivacionais</h1>
-            <p>Encontre mensagens que elevam sua energia e fortalecem sua determinação.</p>
+            <h1 id="tituloPagina">Frases Motivacionais</h1>
+            <p id="subTituloPagina">Encontre mensagens que elevam sua energia e fortalecem sua determinação.</p>
 
             <nav class="main-menu">
-            <ul>
-                <li><a href="/motivacionais">Motivacionais</a></li>
-                <li><a href="/amor">De Amor</a></li>
-                <li><a href="/bom-dia">De Bom Dia</a></li>
-                <li><a href="/amizade">De Amizade</a></li>
-                <li><a href="/reflexao">De Reflexão</a></li>
-                <li><a href="/engracadas">Engraçadas</a></li>
-            </ul>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="/motivacionais">Motivacionais</a></li>
+                    <li><a href="/amor">De Amor</a></li>
+                    <li><a href="/bom-dia">De Bom Dia</a></li>
+                    <li><a href="/amizade">De Amizade</a></li>
+                    <li><a href="/reflexao">De Reflexão</a></li>
+                    <li><a href="/engracadas">Engraçadas</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -43,13 +44,13 @@
     <main class="container">
 
         <!-- INTRODUÇÃO DA CATEGORIA -->
-        <section class="introCategoria">
+        <section class="introCategoria" id="introCategoria">
             <h2>Mensagens para Inspirar o Seu Dia</h2>
             <p>Essas frases foram selecionadas para te motivar e lembrar que cada dia é uma nova oportunidade de vencer.</p>
         </section>
 
         <!-- LISTA DE MENSAGENS -->
-        <section class="listaMensagens">
+        <section class="listaMensagens" id="listaMensagens">
             <article>
                 <blockquote>“Acredite em si mesmo e tudo será possível.”</blockquote>
                 <button>Copiar frase</button>
@@ -79,7 +80,7 @@
         </section>
 
         <!-- FRASES POPULARES / RELACIONADAS -->
-        <section class="relacionadas">
+        <section class="relacionadas" id="relacionadas">
             <h2>Outras frases que você pode gostar</h2>
             <ul>
                 <li><button>Frases de Amor</button></li>
@@ -112,7 +113,7 @@
     </footer>
 
     <!-- SCRIPT DE COPIAR FRASES -->
-    <script>
+    <!-- <script>
         document.querySelectorAll(".listaMensagens button").forEach(btn => {
             btn.addEventListener("click", () => {
             const frase = btn.previousElementSibling.textContent;
@@ -121,7 +122,9 @@
             setTimeout(() => btn.textContent = "Copiar frase", 1500);
             });
         });
-    </script>
+    </script>-->
+
+    <script src="../../js/script.js"></script>
 
 </body>
 </html>
