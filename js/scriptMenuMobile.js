@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (window.innerWidth > 768) {
         menu.style.display = 'flex';
-    } else {
+    } else if(window.innerWidth <= 768) {
         menu.style.display = 'none';
 
         btn.addEventListener("click", () => {
