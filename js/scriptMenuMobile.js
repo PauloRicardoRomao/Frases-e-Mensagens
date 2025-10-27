@@ -11,5 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const isHidden = window.getComputedStyle(menu).display === 'none';
             menu.style.display = isHidden ? 'flex' : 'none';
         });
-    }
+    };
+
+    document.addEventListener("click", (e) => {
+        if (e.target && e.target.id === 'btnMenuMobile') {
+            const menu = document.getElementById('main-menu');
+            if (!menu) return;
+
+            const isHidden = window.getComputedStyle(menu).display === 'none';
+            menu.style.display = isHidden ? 'flex' : 'none';
+        }
+    });
+
 });
