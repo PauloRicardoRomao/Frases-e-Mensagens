@@ -163,6 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             listaMensagens.appendChild(article);
         });
-    }
+    };
 
 });

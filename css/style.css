@@ -432,6 +432,9 @@ button:hover, button:active{
 
         padding: 1rem 0;
     }
+    #main-menu.ativo {
+        display: flex;
+    }
     .main-menu ul {
         flex-direction: column;
         width: 100%;
@@ -450,7 +453,10 @@ button:hover, button:active{
     .containerDestaques button {
         transform: scale(1.8);
     }
-    .containerDestaques article {
+    .containerDestaques article h3{
         font-size: 1.4em;
+    }
+    button{
+        font-size: 1em;
     }
 }

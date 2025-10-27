@@ -13,14 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    document.addEventListener("click", (e) => {
-        if (e.target && e.target.id === 'btnMenuMobile') {
-            const menu = document.getElementById('main-menu');
-            if (!menu) return;
+    let itemMenu = document.querySelectorAll('#main-menu ul li a');
 
-            const isHidden = window.getComputedStyle(menu).display === 'none';
-            menu.style.display = isHidden ? 'flex' : 'none';
-        }
+    itemMenu.forEach((item) => {
+        item.addEventListener("click", () => {
+            menu.style.display = 'none';
+        });
     });
 
 });
