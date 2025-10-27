@@ -163,6 +163,50 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             listaMensagens.appendChild(article);
         });
+        atualizarHead(nome, c);
     };
+
+    function atualizarHead(nome, dados) {
+        // Atualizar título da aba
+        document.title = `${dados.titulo} | RMTI`;
+
+        // Atualizar meta description
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = "description";
+            document.head.appendChild(metaDesc);
+        }
+        metaDesc.content = dados.subtitulo;
+
+        // Atualizar canonical
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = "canonical";
+            document.head.appendChild(canonical);
+        }
+        canonical.href = `https://frases-e-mensagens.netlify.app/${nome}.html`;
+
+        // Atualizar JSON-LD (para Google Rich Results)
+        let ldJson = document.querySelector('script[type="application/ld+json"]');
+        if (!ldJson) {
+            ldJson = document.createElement('script');
+            ldJson.type = 'application/ld+json';
+            document.head.appendChild(ldJson);
+        }
+
+        ldJson.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": dados.titulo,
+            "description": dados.subtitulo,
+            "url": canonical.href,
+            "publisher": {
+                "@type": "Organization",
+                "name": "RMTI"
+            }
+        });
+    }
 
 });
