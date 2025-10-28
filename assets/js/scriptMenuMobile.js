@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const isHidden = window.getComputedStyle(menu).display === 'none';
             menu.style.display = isHidden ? 'flex' : 'none';
         });
-    };
 
-    let itemMenu = document.querySelectorAll('#main-menu ul li a');
+        let itemMenu = document.querySelectorAll('#main-menu ul li a');
 
-    itemMenu.forEach((item) => {
-        item.addEventListener("click", () => {
-            menu.style.display = 'none';
+        itemMenu.forEach((item) => {
+            item.addEventListener("click", () => {
+                menu.style.display = 'none';
+            });
         });
-    });
+    };
 
 });
