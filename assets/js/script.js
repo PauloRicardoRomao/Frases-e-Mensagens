@@ -82,16 +82,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // IDENTIFICAR CATEGORIA
-    const path = window.location.pathname.toLowerCase();
+        // IDENTIFICAR CATEGORIA
+        // Detectar categoria a partir do pathname, hash ou query string
     let categoriaAtual = "motivacionais"; // padrão
 
-    for (const nome in categorias) {
-        if (path.includes(nome)) {
-            categoriaAtual = nome;
-            break;
+    const path = window.location.pathname.toLowerCase();
+    const hash = window.location.hash.toLowerCase().replace("#", "");
+    const searchParams = new URLSearchParams(window.location.search);
+    const categoriaParam = searchParams.get("cat");
+
+    // Tenta detectar por ordem de prioridade
+    if (categoriaParam && categorias[categoriaParam]) {
+        categoriaAtual = categoriaParam;
+    } else if (hash && categorias[hash]) {
+        categoriaAtual = hash;
+    } else {
+        for (const nome in categorias) {
+            if (path.includes(nome)) {
+                categoriaAtual = nome;
+                break;
+            }
         }
     }
+
 
     const dados = categorias[categoriaAtual];
 
